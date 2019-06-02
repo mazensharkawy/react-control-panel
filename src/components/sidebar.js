@@ -1,5 +1,6 @@
 import React from 'react';
 import { Menu, Popover, Position, toaster, Button, Icon } from 'evergreen-ui'
+import SelectedTable from './selectedtable.js'
 const Sidebar = () => {
     return (
         <div className='sidenav'>
@@ -9,7 +10,7 @@ const Sidebar = () => {
                     <Menu>
                         <Menu.Group>
                             <Menu.Item
-                                onSelect={() => toaster.notify('Share')}
+                                onSelect={() => <SelectedTable/> }
                             >
                                table 1
                             </Menu.Item>
