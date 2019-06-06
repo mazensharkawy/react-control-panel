@@ -10,15 +10,19 @@ background-color: white;
 height: 50px;
 margin: 0px;
 cursor: pointer;
+border-width: 1px;
+border-style: solid;
+border-color: #b4b4b4;
+border-width: 0px 0px 1px 0px;
 &:hover {
-    background-color: palevioletred;
+    background-color: #49a6d7;
     color: white;
   }
 `
 const TableName = styled.p`
 margin: 0px;
 padding-top: 15px;
-text-align: center
+text-align: center;
 `
 
 const Sidebar = ({tables, selectTable = ()=>{}}) => {
