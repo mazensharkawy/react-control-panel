@@ -9,6 +9,7 @@ align-text: center;
 background-color: white;
 height: 50px;
 margin: 0px;
+cursor: pointer;
 &:hover {
     background-color: palevioletred;
     color: white;
