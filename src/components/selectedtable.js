@@ -36,32 +36,34 @@ class SelectedTable extends Component {
         let keys = Object.keys(obj[0])
         let values = Object.values(obj)
         return (
-            <Table>
-                <Table.Head>
-                    {keys.map(key => {
-                        return (
-                            <Table.TextHeaderCell>
-                                {key}
-                            </Table.TextHeaderCell>
-                        )
-                    })}
-                </Table.Head>
-                <Table.Body height={240}>
-                    {values.map((val, i) => {
-                        return (
-                            <Table.Row key={val.ID} isSelectable onSelect={() => alert('selected')}>
-                                {keys.map(key => {
-                                    return (
+            <div className="table-container">
+                <Table>
+                    <Table.Head>
+                        {keys.map(key => {
+                            return (
+                                <Table.TextHeaderCell>
+                                    {key}
+                                </Table.TextHeaderCell>
+                            )
+                        })}
+                    </Table.Head>
+                    <Table.Body height={240}>
+                        {values.map((val, i) => {
+                            return (
+                                <Table.Row key={val.ID} isSelectable onSelect={() => alert('selected')}>
+                                    {keys.map(key => {
+                                        return (
+                                            
+                                            <Table.TextCell>{val[key]}</Table.TextCell>
+                                            )
+                                        })}
+                                </Table.Row>
+                            )
+                        })}
+                    </Table.Body>
 
-                                        <Table.TextCell>{val[key]}</Table.TextCell>
-                                    )
-                                })}
-                            </Table.Row>
-                        )
-                    })}
-                </Table.Body>
-
-            </Table>
+                </Table>
+            </div>
         );
     }
 }
